@@ -1,0 +1,26 @@
+<h2>List of employees:</h2>
+
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </thead>
+
+    <tbody>
+
+        <tr *ngFor="let employee of employees">
+
+            <td>{{ employee.id }} </td>
+            <td>{{ employee.name }} </td>
+            <td>{{ employee.phone }} </td>
+            <td>{{ employee.email }} </td>
+            <td><a [routerLink]="['employee/edit',employee.id]">Edit</a></td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+
